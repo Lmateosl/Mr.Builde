@@ -1,0 +1,38 @@
+<body>
+    <form autocomplete="on" name="Nuevo Item" id="formulario">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" (keyup)="nombre($event)" required> <br><br>
+        <label for="nombre">Precio Unitario</label>
+        <input type="number" id="precioUnitario" (keyup)="precio($event)" placeholder="Dólares" value="" step="any" required><br><br>
+        <!--Drop Down select-->
+        <div class="dropdown" id="dropdownWidth">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categorias
+          </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <input type="search" id="myInput" placeholder="Buscar..." (keyup)="onNameKeyUp($event)">
+                <div id="categoriasSelect" data-spy="scroll">
+                </div>
+            </div>
+        </div>
+        <!-- End -->
+        <input type="text" id="tagPost" value="" width="150px" readonly required>
+        <input type="text" id="categoria" value="" hidden=true required>
+        <input class="btn btn-primary" type="button" value="Clear" id="botonBorrar" (click)="clear()"><br><br>
+        <label for="nombre">Tipo</label>
+        <select id="tipo" (change)="getSelectedItem($event.target.value)">
+            <option hidden=true></option>
+            <option value="disena">diseña</option>
+            <option value="construye">construye</option>
+            <option value="repara">repara</option>
+        </select><br><br>
+        <label for="nombre">Unidad de medida</label>
+        <input type="text" placeholder="km, litros, etc..." value="" id="unidadDeMedida" (keyup)="medida($event)" required><br><br>
+        <label for="nombre">Añadir Imagen</label>
+        <input type="file" (change)="onFileSelected($event)" id="upload" placeholder="Upload file" accept=".png, .jpg, .jpeg, .gif, .psd"><br><br>
+        <p>Descripcion</p>
+        <textarea id="textArea" name="descripcion" (keyup)="descripcion($event)" rows="5" cols="100" value="" required></textarea><br><br>
+        <button type="submit" id="crearItem" (click)="enviarForm()">Crear</button>
+        <button type="button"  (click)="cambiarPag()" id="cancelarPut">Cancelar</button>
+    </form>
+</body>

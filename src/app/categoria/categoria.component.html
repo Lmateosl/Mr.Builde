@@ -1,0 +1,50 @@
+<body>
+  <form id="formulario" (ngSubmit)= "enviarForm(f)" #f="ngForm">
+    <h3>Crear Nueva Categoria</h3>
+    <div class="form-group">
+      <label for="formGroupExampleInput">Nombre de categoria</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input" ngModel name="nombre">
+    </div>
+    <button type="submit" id="crearItem">Crear</button>
+  </form>
+  <form id="formulario2">
+    <h3>Cambiar Nombre De Categoria</h3>
+    <p id="cambiaCat">Seleccionar la Categoria</p>
+    <!--Drop Down select-->
+    <div class="dropdown" id="dropdownWidth">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Categorias
+      </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <input type="search" id="myInput" placeholder="Buscar..." (keyup)="onNameKeyUp($event)">
+            <div id="categoriasSelect" data-spy="scroll">
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+    <input type="text" id="tagPost" value="" width="150px" readonly required>
+    <input type="text" id="categoria" value="" hidden=true required>
+    <label for="porC">Cambiar Por:</label>
+    <input type="text" id="tagPost2" value="" width="150px" (keyup)="nombre($event)" required >
+    <button type="submit" id="crearItem2" (click)="enviarForm2()">Cambiar</button>
+  </form>
+  <form id="formulario3">
+    <h3>Borrar Categoria</h3>
+    <p id="cambiaCat">Seleccionar la Categoria</p>
+    <!--Drop Down select-->
+    <div class="dropdown" id="dropdownWidth">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Categorias
+      </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <input type="search" id="myInput" placeholder="Buscar..." (keyup)="onNameKeyUp2($event)">
+            <div id="categoriasSelect2" data-spy="scroll">
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+    <input type="text" id="tagPost3" value="" width="150px" readonly required>
+    <input type="text" id="categoria2" value="" hidden=true required>
+    <button type="submit" id="crearItem2" (click)="enviarForm3()">Borrar</button>
+  </form>
+</body>

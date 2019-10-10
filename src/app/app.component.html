@@ -1,3 +1,7 @@
-<h1>
-  {{title}}
-</h1>
+<div class="all">
+    <app-bara-prin></app-bara-prin>
+    <app-inicio id="inicioApp" hidden (change)="hidde($event)"></app-inicio>
+    <app-login id="barras"></app-login>
+    <router-outlet id="centro" hidden></router-outlet><br><br>
+    <app-fot></app-fot>
+</div>

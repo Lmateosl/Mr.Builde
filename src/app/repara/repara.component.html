@@ -1,0 +1,105 @@
+<body>
+        <div id="lupa">
+            <div id="busqueda2"></div>
+            <button (click)="busqueda()" type="button" id="botonB"><img src="https://res.cloudinary.com/indev/image/upload/v1569531228/Assets/search_yo5xfx.png" width="40%"></button>
+            <input type="search" id="busqueda" (keyup)="onNameKeyUp($event)">
+            <div id="busqueda3"></div>
+        </div>
+        <table id="tablaDiseno" border="solid 1px red">
+          <thead>
+              <tr class="tablaCabeza">
+                  <th>Nombre</th>
+                  <th>Unidad</th>
+                  <th>Precio Unitario</th>
+                  <th>Descripcion</th>
+                  <th>Imagen</th>
+                  <th>Editar</th>
+              </tr>
+          </thead>
+          <tbody class="tablaCuerpo" id="ingresar">
+          </tbody>
+        
+        </table>
+    
+        <div id="flechas">
+            <div id="bloque2"></div>
+            <img src="https://res.cloudinary.com/indev/image/upload/v1569597276/Assets/left-arrow_bbwcyx.png" id="bloque1" width="3%" (click)="menos()">
+            <img src="https://res.cloudinary.com/indev/image/upload/v1569597284/Assets/right-arrow_oawghd.png" id="bloque1" width="3%" (click)="mas()">
+            <div id="bloque3"></div>
+        </div>
+        <!-- Modal1 -->
+        <div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" id="modnalContente">
+          <div class="modal-content" >
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Editar</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" >
+                <form autocomplete="on" name="Nuevo Item" id="formulario">
+                    <input type="text" nombre="id" value="" hidden=true id="id">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" (keyup)="nombre($event)" required> <br><br>
+                    <label for="nombre">Precio Unitario</label>
+                    <input type="number" id="precioUnitario" (keyup)="precio($event)" placeholder="Dólares" value="" required><br><br>
+                    <!--Drop Down select-->
+                    <div class="dropdown" id="dropdownWidth">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categorias
+                      </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <input type="search" id="myInput" placeholder="Buscar..." (keyup)="onCatKeyUp($event)">
+                            <div id="categoriasSelect" data-spy="scroll">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="text" id="tagPost" value="" width="150px" readonly required>
+                    <input type="text" id="categoria" value="" hidden=true required>
+                    <input class="btn btn-primary" type="button" value="Clear" id="botonBorrar" (click)="clear()"><br><br>
+                    <label for="nombre">Tipo</label>
+                    <select id="tipo" (change)="getSelectedItem($event.target.value)">
+                        <option hidden=true></option>
+                        <option value="disena">diseña</option>
+                        <option value="construye">construye</option>
+                        <option value="repara" selected >repara</option>
+                    </select><br><br>
+                    <label for="nombre">Unidad de medida</label>
+                    <input type="text" placeholder="km, litros, etc..." value="" id="unidadDeMedida" (keyup)="medida($event)" required><br><br>
+                    <label for="nombre">Imagen:   </label>
+                    <a hrfe="" id="imagenAc"></a>
+                    <img id="cancelate" (click)="unHidde()" src="https://res.cloudinary.com/indev/image/upload/v1570207106/Assets/cross-delete-or-close-circular-button-interface-symbol_ikqw9f.png" width="5%" id="x">
+                    <input type="file" (change)="onFileSelected($event)" id="upload" placeholder="Upload file" accept=".png, .jpg, .jpeg, .gif, .psd" hidden=true><br><br>
+                    <p>Descripcion</p>
+                    <input id="textArea" type="text" name="descripcion" (keyup)="descripcion($event)" width="70px" value="" required><br><br>
+                    <button type="submit" id="crearItem" (click)="enviarFormCat()">Crear</button>
+                    <button type="button"  data-dismiss="modal" aria-label="Close" id="cancelarPut">Cancelar</button>
+                </form>
+            </div>
+          </div>
+        </div>
+        </div>
+       <!-- Modal2 -->
+      <div class="modal fade" id="delateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Borrar Rubro</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="dialogoBorrar">
+               
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary" (click)="delate()">Borrar</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- End -->
+    
+    </body>

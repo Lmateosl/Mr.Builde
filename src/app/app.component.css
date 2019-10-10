@@ -1,0 +1,16 @@
+@font-face{
+    font-family: "Montserrat";
+    src: url(https://res.cloudinary.com/indev/raw/upload/v1569531998/Assets/Montserrat-Regular_cf1yrw.otf)
+}
+app-inicio{
+    width: 100%;
+    background: url(https://res.cloudinary.com/indev/image/upload/v1569531224/Assets/ladrillo_zvtvac.jpg)
+}
+.all{
+    width: 100%;
+    background: url(https://res.cloudinary.com/indev/image/upload/v1569531224/Assets/ladrillo_zvtvac.jpg)
+}
+
+
+
+

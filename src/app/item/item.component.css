@@ -1,0 +1,207 @@
+@font-face{
+    font-family: "Montserrat";
+    src: url(https://imagenes-mrbuilder.s3-sa-east-1.amazonaws.com/Fonts+/Montserrat-Regular.otf)
+}
+body{
+    font-family: Montserrat;
+    width: 100%;
+    height: 100%;
+    background: url(https://res.cloudinary.com/indev/image/upload/v1569531224/Assets/ladrillo_zvtvac.jpg);
+}
+
+#cabecera{
+    margin: 0 auto; 
+    width: 100%;
+    height: 100px;
+    background-color: #FFC800;
+    box-shadow: 2px 2px 10px black;
+}
+
+#elementos{
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: 3%;
+
+}
+#builder{
+    display: block;
+    margin:  0 auto;
+}
+#disena{
+    order: 1;
+    flex-grow: 1;
+    height: 60px;
+    background-color: #FFC800;
+    border: solid 2px black;
+    justify-content: space-between;
+    margin: 20px;
+    vertical-align: center;
+    box-shadow: 2px 2px 10px black;
+    text-decoration: none;
+}
+#construye{
+    order: 2;
+    flex-grow: 1;
+    height: 60px;
+    background-color: #FFC800;
+    border: solid 2px black;
+    justify-content: space-between;
+    margin: 20px;
+    vertical-align: center;
+    box-shadow: 2px 2px 10px black;
+    text-decoration: none;
+}
+#repara{
+    order: 3;
+    flex-grow: 1;
+    height: 60px;
+    background-color: #FFC800;
+    border: solid 2px black;
+    justify-content: space-between;
+    margin: 20px;
+    vertical-align: center;
+    box-shadow: 2px 2px 10px black;
+    text-decoration: none;
+}
+#remodela{
+    order: 4;
+    flex-grow: 1;
+    height: 60px;
+    background-color: #FFC800;
+    border: solid 2px black;
+    justify-content: space-between;
+    margin: 20px;
+    vertical-align: center;
+    box-shadow: 2px 2px 10px black;
+    text-decoration: none;
+}
+.menupri{
+    color: black;
+}
+#cabecera2{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%; 
+    height: 100%;
+}
+#titulo1{
+   order: 2;
+   flex-grow: 3;
+   text-align: center;
+   margin-top: auto;
+   margin-bottom: auto;
+}
+#retroceder{
+    order: 1;
+    flex-grow: 1;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 3%;
+    text-decoration: none;
+    color: black;
+}
+#relleno3{
+    order: 3;
+    flex-grow: 1;
+}
+#itemNuevo{
+    margin: 1%;
+}
+#boton1{
+    background-color: #FFC800;
+    height: 40px;
+    border: solid 2px black;
+    width: 10%;
+    border-radius: 8%;
+    font-family: Montserrat;
+    text-decoration: none;
+    color: black;
+}
+#tablaDiseno{
+    border: solid 2px black;
+    background-color: whitesmoke;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 4px 4px 12px black;
+}
+#tablaCabeza{
+    height: 70px;
+}
+.tablaCuerpo{
+    height: 100px;
+    text-align: center;
+}
+#formulario{
+    background-color: whitesmoke;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 3%;
+    height: 700px;
+    padding: 3%;
+    border-radius: 60px;
+    box-shadow: 2px 2px 10px black;
+    border: solid 2px black;
+}
+#crearItem{
+    display: inline;
+    background-color: #FFC800;
+    border: solid 2px black;
+    border-radius: 8%;
+    font-family: Montserrat;
+    text-decoration: none;
+    color: black;
+    
+}
+#textArea{
+    width: 100%;
+}
+
+#myInput {
+    box-sizing: border-box;
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 10px 20px 15px 35px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#dropdownMenuButton{
+    background-color: #FFC800;
+    color: black;
+    box-shadow: 2px 2px 10px black;
+    border: solid 2px black;
+}
+#categoriasSelect{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 40px;
+}
+
+#dropdownWidth{
+    display: inline;
+    margin-right: 20px;
+
+}
+#tagPost{
+    display: inline;
+    margin-right: 20px;
+    overflow-x: scroll;
+    
+}
+#botonBorrar{
+    background-color: #FFC800;
+    color: black;
+    box-shadow: 2px 2px 10px black;
+    border: solid 2px black;
+}
+#cancelarPut{
+    background-color: #FFC800;
+    color: black;
+    border: solid 2px black;
+    text-align: center;
+    margin-left: 75%;
+}

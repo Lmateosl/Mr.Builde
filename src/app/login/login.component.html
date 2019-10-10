@@ -1,0 +1,30 @@
+<body>
+    <form id="formulario" (ngSubmit)= "enviarForm(f)" #f="ngForm">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" ngModel name="usuario">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ngModel name="clave">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" ngModel name="checkbox">
+          <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
+        </div>
+        <button type="submit" class="btn btn-primary" id="loginSub">Submit</button>
+      </form>
+      <form class="form-inline" hidden id="formulario2">
+          <div class="form-group mb-2">
+            <label for="staticEmail2" class="sr-only">Email</label>
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="inputPassword2" class="sr-only">Password</label>
+            <input type="password" class="form-control" id="inputPassword2" placeholder="Password" (keyup)="enviarForm2($event)">
+          </div>
+          <button type="submit" class="btn btn-primary mb-2" id="confirmSub" (click)="submit()">Confirm</button>
+          <p id="emailCh">Cambiar de email</p>
+        </form>
+</body>
